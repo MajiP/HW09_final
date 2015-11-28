@@ -9,7 +9,7 @@ The pipeline works as follows:
 2) Use gapminder.tsv and **analysis.R** to analyse and explore the data. I reorder continents on basis of standard deviation of gdp per capita, excluding Oceania which has only 2 countries. 
 ![](gdpPercap.png)
 
-I filter observations that show minimum/maximum gdp per capita for each continent, for a year. I keep only these country levels and write the new dataset to file as gap_data_clean.tsv
+I filter observations that show minimum/maximum gdp per capita for each continent, for a year. I keep only these country levels and write the new dataset to file as gap_data_clean.tsv. Here's the corresponding plot:
 ![](min_maxgdppercap.png)
 
 3) Using gap_data_clean.tsv and **stats.R** I plot the linear regression function for life expectancy vs. gdp per capita for each country (for the selected country and continent levels), filter the results for each continent which show the lowest standard deviation of residual (lowest 3) and write the filtered results to file as linfit_filtered.tsv
