@@ -4,21 +4,21 @@ Poushali
 
 The pipeline works as follows: 
 
-1) Download data using **download.R** script and save as gapminder.tsv
+1) Download data using [download.R](https://github.com/Poush87/HW09_final/blob/master/download.R) script and save as gapminder.tsv
 
-2) Use gapminder.tsv and **analysis.R** to analyse and explore the data. I reorder continents on basis of standard deviation of gdp per capita, excluding Oceania which has only 2 countries. 
+2) Use gapminder.tsv and [analysis.R](https://github.com/Poush87/HW09_final/blob/master/analysis.R) to analyse and explore the data. I reorder continents on basis of standard deviation of gdp per capita, excluding Oceania which has only 2 countries. 
 ![](gdpPercap.png)
 
 I filter observations that show minimum/maximum gdp per capita for each continent, for a year. I keep only these country levels and write the new dataset to file as gap_data_clean.tsv. Here's the corresponding plot:
 ![](min_maxgdppercap.png)
 
-3) Using gap_data_clean.tsv and **stats.R** I plot the linear regression function for life expectancy vs. gdp per capita for each country (for the selected country and continent levels), filter the results for each continent which show the lowest standard deviation of residual (lowest 3) and write the filtered results to file as linfit_filtered.tsv
+3) Using gap_data_clean.tsv and [stats.R](https://github.com/Poush87/HW09_final/blob/master/stats.R) I plot the linear regression function for life expectancy vs. gdp per capita for each country (for the selected country and continent levels), filter the results for each continent which show the lowest standard deviation of residual (lowest 3) and write the filtered results to file as linfit_filtered.tsv
 
-4) Next I use linfit_filtered.tsv, gap_data_clean.tsv and **plots.R** to plot the change in gdp per capita with time for each continent, also showing life expectancy for each country and year, and save the plots to file. Here's an example plot for Asia. 
+4) Next I use linfit_filtered.tsv, gap_data_clean.tsv and [plots.R](https://github.com/Poush87/HW09_final/blob/master/plots.R) to plot the change in gdp per capita with time for each continent, also showing life expectancy for each country and year, and save the plots to file. Here's an example plot for Asia. 
 ![](Asia_gdp_life.png)
 
 Within each continent, countries that show high gdp per capita in any eyar, also show higher life expectancy compared to countries that show minimum life expectancy in a year. 
 
-5) I finally use the **Makefile** so that the entire process is automated. 
+5) I finally use the [Makefile](https://github.com/Poush87/HW09_final/blob/master/Makefile) so that the entire process is automated. 
 
 
