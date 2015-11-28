@@ -17,5 +17,5 @@ plots: plots.R linfit_filtered.tsv gap_data_clean.tsv
 	Rscript plots.R
 	rm -f Rplots.pdf
 	
-report.html: report.Rmd plots
+report.html: report.Rmd plots analysis.R
 	Rscript -e 'rmarkdown::render("report.Rmd")'
