@@ -9,16 +9,16 @@ gap_data_clean2 <- gap_data_clean2 %>% filter(country %in% filteredcountry) %>% 
 levels((gap_data_clean2$country))
 
 gap_data_clean2 %>% filter(continent == 'Africa') %>% 
-	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+scale_x_log10()+geom_point()+geom_smooth(se=FALSE)
+	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+scale_x_log10()+geom_point()+geom_smooth(se=FALSE)+ggtitle("Africa")
 ggsave("Africa_gdp_life.png")
 gap_data_clean2 %>% filter(continent == 'Americas') %>% 
-	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)
+	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)+ggtitle("Americas")
 ggsave("Americas_gdp_life.png")
 
 gap_data_clean2 %>% filter(continent == 'Asia') %>% 
-	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)
+	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)+ggtitle("Asia")
 ggsave("Asia_gdp_life.png")
 
 gap_data_clean2 %>% filter(continent == 'Europe') %>% 
-	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)
+	ggplot(aes(year, gdpPercap, colour=country, size=lifeExp))+geom_point()+scale_x_log10()+geom_smooth(se=FALSE)+ggtitle("Europe")
 ggsave("Europe_gdp_life.png")
