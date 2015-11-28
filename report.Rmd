@@ -15,7 +15,7 @@ I filter observations that show minimum/maximum gdp per capita for each continen
 
 3) Using gap_data_clean.tsv and **stats.R** I plot the linear regression function for life expectancy vs. gdp per capita for each country (for the selected country and continent levels), filter the results for each continent which show the lowest standard deviation of residual (lowest 3) and write the filtered results to file as linfit_filtered.tsv
 
-4) Next I use linfit_filtered.tsv and **plots.R** to plot the change in life expectancy with gdp per capita for each continent and save the plots to file. Here's an example plot for Asia. 
+4) Next I use linfit_filtered.tsv, gap_data_clean.tsv and **plots.R** to plot the change in gdp per capita with time for each continent, also showing life expectancy for each country and year, and save the plots to file. Here's an example plot for Asia. 
 ![](Asia_gdp_life.png)
 
 5) I finally use the **Makefile** so that the entire process is automated. 
